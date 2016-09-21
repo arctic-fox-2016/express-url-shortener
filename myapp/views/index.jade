@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Shorten Your URL
+  p Enter your long URL here, to generate a super cool shortened URL
+
+  form(action="/urls" method="post")
+    input(name="long_url")
+    input(type="submit" value="Generate Shortened URL")
+
+  h1(style='margin-top:100px') List of all current short URLs
+  p
+    ol
+      - each item in data
+        li
+          a(href=item.dataValues.short_url) #{item.dataValues.long_url}
