@@ -5,8 +5,13 @@ var app = express()
 var bodyParser = require('body-parser')
 var model = require('./models/index')
 app.use(bodyParser.urlencoded({extended: true}))
+app.set('port', (process.env.PORT || 5000));
+
+
 
 app.set('view-engine', 'ejs')
+
+
 
 app.get('/',function(req,res,next){
   res.send('test')
@@ -36,4 +41,7 @@ app.get('/red/:id', function(req,res,next){
   })
 })
 
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 //
