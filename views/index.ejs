@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<head>
+</head>
+<body>
+  <p>Halo</p>
+  <% if (word){
+    for (let i in word){ %>
+      <li><a href = <%= word[i].name %> >andrewly<%=word[i].id %></a>
+    <% }
+  }
+  %>
+  <form action="/urls" method="POST">
+    <input type = "text" name = "url">
+    <input type = "submit">
+  </form>
+</body>
+</html>
