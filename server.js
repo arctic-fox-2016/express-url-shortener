@@ -6,7 +6,6 @@ var bodyParser = require('body-parser')
 var model = require('./models/index')
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.listen(3000)
 app.set('view-engine', 'ejs')
 
 app.get('/',function(req,res,next){
