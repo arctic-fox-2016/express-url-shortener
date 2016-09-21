@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "andrew",
-    "password": "apaapa",
-    "database": "shortener",
-    "host": "127.0.0.1",
+    "username": "nmvtmuklzydyas",
+    "password": "-aR95RI3SME9A7pvgvaWaZI7T2",
+    "database": "d3khr03og9p02o",
+    "host": "ec2-50-19-227-171.compute-1.amazonaws.com",
     "dialect": "postgres"
   },
   "test": {
-    "username": "andrew",
-    "password": "apaapa",
-    "database": "shortener",
-    "host": "127.0.0.1",
+    "username": "nmvtmuklzydyas",
+    "password": "-aR95RI3SME9A7pvgvaWaZI7T2",
+    "database": "d3khr03og9p02o",
+    "host": "ec2-50-19-227-171.compute-1.amazonaws.com",
     "dialect": "postgres"
   },
   "production": {
-    "username": "andrew",
-    "password": "apaapa",
-    "database": "shortener",
-    "host": "127.0.0.1",
+    "username": "nmvtmuklzydyas",
+    "password": "-aR95RI3SME9A7pvgvaWaZI7T2",
+    "database": "d3khr03og9p02o",
+    "host": "ec2-50-19-227-171.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
