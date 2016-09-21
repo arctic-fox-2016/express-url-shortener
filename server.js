@@ -1,9 +1,9 @@
 "use-strict"
 
-let express = require('express')
-let app = express()
-let bodyParser = require('body-parser')
-let model = require('./models/index')
+var express = require('express')
+var app = express()
+var bodyParser = require('body-parser')
+var model = require('./models/index')
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.listen(3000)
