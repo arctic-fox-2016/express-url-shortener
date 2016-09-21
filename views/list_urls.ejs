@@ -26,11 +26,13 @@
     <tr>
       <th>Short</th>
       <th>Long</th>
+      <th>Count</th>
     </tr>
       <% for(var i=0; i < url_db.length; i++) {%>
         <tr>
          <td><%= url_db[i].dataValues.short %></td>
          <td> <a href="<%= url_db[i].dataValues.long %>"><%= url_db[i].dataValues.long %></a></td>
+         <td> <a href="<%= url_db[i].dataValues.count %>"><%= url_db[i].dataValues.count %></a></td>
 
        </tr>
       <% } %>

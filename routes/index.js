@@ -13,7 +13,8 @@ router.post('/short_url', function(req, res, next) {
   let hasil = helper.randomShort();
   models.urls.create({
     short: hasil,
-    long: url
+    long: url,
+    count: 0
   }).then(function(urls) {
     res.render('index', {title:'Input your URL to be shortened', new_url: 'Your short URL is: ' + urls.short})
   });
@@ -26,13 +27,14 @@ router.get('/urls', function (req, res) {
   })
 })
 
-router.get('/url/:short_url', function (req, res, next) {
+router.get('/go/:short_url', function (req, res, next) {
   models.urls.find({
     where: {
       short: req.params.short_url
     }
   }).then( function(result) {
     //res.redirect(result);
+    result.increment('count')
     res.render('redirect', {title:'Click the long URL', container:result})
   })
 
