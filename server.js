@@ -6,25 +6,17 @@ var bodyParser = require('body-parser')
 var model = require('./models/index')
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('port', (process.env.PORT || 5000));
-
-
-
 app.set('view-engine', 'ejs')
 
-
-
-app.get('/',function(req,res,next){
-  res.send('test')
+app.get('/', function(req,res,next){
+  model.url.findAll().then(function(urls){
+    if(urls){
+      res.render('./index.ejs',{word: urls})
+    } else {
+      res.render('./index.ejs')
+    }
+  })
 })
-// app.get('/', function(req,res,next){
-//   model.url.findAll().then(function(urls){
-//     if(urls){
-//       res.render('./index.ejs',{word: urls})
-//     } else {
-//       res.render('./index.ejs')
-//     }
-//   })
-// })
 
 app.post('/urls', function(req,res,next){
   model.url.create({name: req.body.url, click_count:0}).then(function(){
