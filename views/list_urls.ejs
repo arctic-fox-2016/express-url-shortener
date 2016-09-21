@@ -1,0 +1,39 @@
+<html>
+<head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+
+<body>
+  <h1> <%= title%>
+  </h1>
+
+  <table>
+    <tr>
+      <th>Short</th>
+      <th>Long</th>
+    </tr>
+      <% for(var i=0; i < url_db.length; i++) {%>
+        <tr>
+         <td><%= url_db[i].dataValues.short %></td>
+         <td> <a href="<%= url_db[i].dataValues.long %>"><%= url_db[i].dataValues.long %></a></td>
+
+       </tr>
+      <% } %>
+  </table>
+<body>
+</html>
