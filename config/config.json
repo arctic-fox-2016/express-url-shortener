@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "short_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "short_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "short_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
