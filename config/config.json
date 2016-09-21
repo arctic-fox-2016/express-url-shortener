@@ -4,14 +4,22 @@
     "password": "-aR95RI3SME9A7pvgvaWaZI7T2",
     "database": "d3khr03og9p02o",
     "host": "ec2-50-19-227-171.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "logging": false,
+    "dialectOptions": {
+        "ssl": true
+    }
   },
   "test": {
     "username": "nmvtmuklzydyas",
     "password": "-aR95RI3SME9A7pvgvaWaZI7T2",
     "database": "d3khr03og9p02o",
     "host": "ec2-50-19-227-171.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "logging": false,
+    "dialectOptions": {
+        "ssl": true
+    }
   },
   "production": {
     "username": "nmvtmuklzydyas",
