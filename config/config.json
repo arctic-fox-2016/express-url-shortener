@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "urlshortenerdb",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "urlshortenerdb",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "wuwwyayqriykem",
+    "password": "-knQqZk5XP6WN1RTy5edffR-BI",
+    "database": "df362pd6hb1bek",
+    "host": "ec2-54-243-236-70.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "logging": false,
+    "dialectOptions": {
+      "ssl":true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>. <strong>Please insert your link below:</strong></p>
+    <div>
+      <form method="POST" action="/urls/">
+        <input type="text" name="link" />
+        <button type="submit">Process</button>
+      </form>
+    </div>
+    <ul id="link-list" style="margin:50px 0px 0px;padding:0px;list-style:none;display:inline-block;">
+      <% for(var i=0; i<list.length; i++) {%>
+      <li style="border-top:1px solid #ccc;padding:20px 25px;">
+        <span><strong>Link #<%= i+1 %></strong> (<%= list[i]["link"] %>)</span><br /><br />
+        <a href="/<%= list[i]['name'] %>" target="_blank">yourdomain.com/<%= list[i]["name"] %></a><br /><br />
+        <span><strong>Click count: <%= list[i]["click_count"] %></strong></span>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
