@@ -15,6 +15,10 @@
     "User":"mbgoiqwmobvrky",
     "Port":"5432",
     "Password":"vpqqwMsTLB5_bP1fSW9Qy5pl4q",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "logging":false,
+    "dialectOptions" :{
+      "ssl":true
+    }
   }
 }
