@@ -25,10 +25,12 @@ app.post('/urls', function(req,res,next){
   })
 })
 
-app.get('/:id', function(req,res,next){
+app.get('/red/:id', function(req,res,next){
   model.url.findAll({where: {id: req.params.id}}).then(function(result){
-    let updateClick = result.click_count + 1
-    model.url.update({click_count: updateClick},{where: {id: result.id}})
+    let updateClick = result[0].click_count + 1
+    model.url.update({click_count: updateClick},{where: {id: result[0].id}}).then(function(){
+      res.redirect(result[0].name)
+    })
   })
 })
 

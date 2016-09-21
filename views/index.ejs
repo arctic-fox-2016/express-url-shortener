@@ -5,7 +5,7 @@
   <p>Halo</p>
   <% if (word){
     for (let i in word){ %>
-      <li><a href = <%= word[i].name %> >andrewly<%=word[i].id %></a>
+      <li><a href = "/red/<%=word[i].id%>" >andrewly<%=word[i].id %>|      click_count: <%=word[i].click_count%></a>
     <% }
   }
   %>
